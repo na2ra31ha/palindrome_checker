@@ -1,0 +1,479 @@
+:root{
+    --background:#0B192C;
+    --whitetext:#F5F5F5;
+    --buttoninputcolor:#4021db;
+    --shadow:#4379F2;
+    --textbackground:#117554;
+  }
+  
+  *,*::before,*::after{
+      box-sizing:border-box;
+  }
+  
+  body{
+      background-color:var(--background);
+      margin:0;
+      padding:0;
+      overflow:hidden;
+      width:100%;
+      height:100vh;
+      font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+  
+  }
+  .container{
+      width:60%;
+      height:100vh;
+      text-align:center;
+      display:flex;
+      flex-direction: column;
+      row-gap: 10px;
+       margin:20px auto 0;
+       padding-top:50px;
+  }
+  
+  .title-a{
+      width:100%;
+      height:10vh;
+      font-size:40px;
+      font-weight:700;
+      margin:10px auto;
+      font-weight:700;
+      letter-spacing:-2px;
+      color:var(--whitetext);
+      display:block;
+  }
+  .title-b{
+      width:100%;
+      height:10vh;
+      font-size:40px;
+      font-weight:700;
+      margin:10px auto;
+      font-weight:700;
+      letter-spacing:-2px;
+      color:var(--whitetext);
+      display:none;
+  }
+  .palindrome-container{
+      width:83%;
+      max-height:40vh;
+      padding:20px;
+      margin:15px auto 0;
+      background-color:var(--whitetext);
+      box-shadow: 1.2px 7px 4px var(--shadow);
+      border-radius:20px;
+  }
+  label{
+      height:20%;
+     letter-spacing: -1px;
+     font-weight:500;
+  }
+  .input-check{
+      margin-top:28px;
+      width:100%;
+      height:40%;
+  }
+  .input-check > input{
+      width:65%;
+      height:30px;
+      border-width: 0px 0px 2px 0px;
+      text-align:center;
+      font-size:20px;
+      font-weight: bold;
+      margin-bottom:-8px;
+      border-bottom-color:var(--buttoninputcolor);
+      background-color:var(--whitetext);
+  }
+  
+  .input-check > button{
+      width:24%;
+      height:40px;
+      padding:4px;
+      font-size:15px;
+      color:var(--whitetext);
+      background-color: var(--buttoninputcolor);
+      border: none;
+      border-radius: 20px;
+  }
+  .palindrome-definition{
+      width:83%;
+      height:28vh;
+      padding-top:6px;
+      padding-bottom:6px;
+      padding-left:20px;
+      padding-right:20px;
+      text-align:center;
+      font-size:18px;
+      margin:20px auto -10px;
+      background-color:var(--textbackground);
+      border-radius:20px;
+  }
+  .palindrome-definition > p{
+      color:var(--whitetext);
+      font-weight:600;
+  }
+  .palindrome-definition > p > i{
+      font-size:30px;
+      float:left;
+  }
+  .hidden-text{
+      display:none;
+      margin-top:-10px;
+      width:100%;
+      height:50%;
+      letter-spacing:0.8px;
+  }
+  .hidden-text > .result-text {
+      font-size:18px;
+      font-weight:450;
+  }
+  .cute-face{
+      display:none;
+  }
+  
+  @media screen and (max-height:600px) and (max-width:800px){
+      body{
+          width:100vw;
+          height:100vh;
+          overflow:scroll;
+          background-color:var(--textbackground);
+      }
+      .container{
+          width:100vw;
+          height:100vh;
+          row-gap:40px;
+          margin:2rem 0;
+      }
+      .title-a{
+          display:none;
+      }
+      .title-b{
+          display:block;
+          position:relative;
+          top:-4rem;
+          left:-10px;
+          height:4vh;
+         font-size:21px;
+         letter-spacing: 1.4px;
+         z-index:99;
+      }
+      .title-b > span{
+          font-size:30px;
+          color:#f27b0d;
+          letter-spacing:-0.5px;
+      }
+      .palindrome-container{
+          position: absolute;
+          top:25rem;
+          left:5rem;
+          margin-bottom:40px;
+          z-index:99;
+          width:56%;
+          max-height:45vh;
+      box-shadow: 0px 0px 1px var(--shadow);
+      border-radius:10px;
+  }
+  label{
+     font-size:16px;
+  }
+  .input-check{
+      margin-top:24px;
+      height:35%;
+  }
+  .input-check > input{
+      width:65%;
+      height:40px;
+      border-width: 0px 0px 2px 0px;
+      font-size:13px;
+  }
+  .input-check > button{
+      width:24%;
+      height:40px;
+      padding:4px;
+      font-size:12px; 
+      border-radius: 10px;
+  }
+  .hidden-text{
+      display:none;
+      margin-top:25px;
+      height:40%;
+  }
+  .hidden-text > .result-text {
+      font-size:15px;
+  }
+      .palindrome-definition{
+          position:absolute;
+          width:55%;
+          height:38vh;
+          padding-top:3px;
+          padding-bottom:4px;
+          padding-left:10px;
+          padding-right:10px;
+          text-align:left;
+          font-size:18px;
+          margin:10px 0 0 20px;
+          box-shadow: 0px 0px 6px 3px #f09c00;
+          border-radius:20px;
+      }
+      .palindrome-definition > p{
+          font-weight:200;
+      }
+      .palindrome-definition > p > i{
+          margin-right:2px;
+          margin-bottom:-0.5rem;
+      }
+      .cute-face{
+          display:block;
+          position:absolute;
+          right:-20px;
+          top:15rem;
+          width:30vw;
+          height:30vw;
+          text-align:center;
+          background-color: #d1451b;
+          border:20px solid rgb(28, 189, 234);
+          border-radius:50%;
+      }
+      .eyes{
+          position:relative;
+          top:25px;
+          left:25px;
+          width:70%;
+          display:flex;
+          flex-direction: row;
+      }
+      .l-eye{
+          border-bottom-width:3vh;
+          border-left-width:2vw;
+          border-right-width:2vw;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: rgb(238, 248, 52);;
+          border-left-style:solid;
+          border-right-style:solid;
+          border-bottom-style:solid;
+          width:3vw;
+          height:3vh;
+          border-top-left-radius:90px ;
+          border-top-right-radius:50px ;
+          margin-right:15px;
+          background-color: transparent;
+  
+      }
+      .r-eye{
+          border-bottom-width:3vh;
+          border-left-width:2vw;
+          border-right-width:2vw;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: rgb(238, 248, 52);
+          border-left-style:solid;
+          border-right-style:solid;
+          border-bottom-style:solid;
+          width:3vw;
+          height:3vh;
+          border-top-left-radius:50px ;
+          border-top-right-radius:110px ;
+          margin-left:12px;
+          background-color:transparent;
+      }
+      .mouth{
+          position:relative;
+          top:50px;
+          left:28px;
+          width:12vw;
+          height:3vh;
+          background-color:#F5F5F5;
+          border:1px solid rgb(62, 230, 245); 
+      }
+      .frown-mouth{
+          border-top-left-radius:50px;
+          border-top-right-radius:50px;
+          border-bottom-left-radius:0;
+          border-bottom-right-radius:0;
+      }
+      .smile-mouth{
+          border-top-left-radius:0;
+          border-top-right-radius:0;
+          border-bottom-left-radius:50px;
+          border-bottom-right-radius:50px;
+      }
+  
+  }
+  
+  @media screen and (max-height:800px) and (max-width:600px){
+      body{
+          width:100vw;
+          height:100vh;
+          overflow:scroll;
+          background-color:var(--textbackground);
+      }
+      .container{
+          width:100vw;
+          height:100vh;
+          row-gap:40px;
+          margin-top:2rem;
+        margin-bottom:5rem;
+      }
+      .title-a{
+          display:none;
+      }
+      .title-b{
+          display:block;
+          position:relative;
+          top:-4rem;
+          left:-10px;
+          max-width:400px;
+          width:80%;
+          height:4vh;
+         font-size:21px;
+         letter-spacing:-1.4px;
+         z-index:99;
+      }
+      .title-b > span{
+          position:absolute;
+          top:25px;
+          left:5px;
+          font-size:30px;
+          color:#f2fb0d;
+          letter-spacing:6.5px;
+      }
+      .palindrome-container{
+          position: absolute;
+          top:32rem;
+          left:1rem;
+          margin-bottom:80px;
+          z-index:99;
+          width:80%;
+          max-height:45vh;
+          box-shadow: 0px 0px 1px var(--shadow);
+          border-radius:10px;
+  }
+  label{
+     font-size:16px;
+  }
+  .input-check{
+      margin-top:24px;
+      height:35%;
+  }
+  .input-check > input{
+      width:65%;
+      height:40px;
+      border-width: 0px 0px 2px 0px;
+      font-size:13px;
+  }
+  .input-check > button{
+      width:24%;
+      height:40px;
+      padding:4px;
+      font-size:12px; 
+      border-radius: 10px;
+  }
+  .hidden-text{
+      display:none;
+      margin-top:25px;
+      height:40%;
+  }
+  .hidden-text > .result-text {
+      font-size:15px;
+  }
+      .palindrome-definition{
+          position:absolute;
+          width:80%;
+          height:38vh;
+          padding-top:3px;
+          padding-bottom:4px;
+          padding-left:10px;
+          padding-right:10px;
+          text-align:left;
+          font-size:18px;
+          margin:50px 0 0 20px;
+          box-shadow: 0px 0px 6px 3px #f09c00;
+          border-radius:20px;
+      }
+      .palindrome-definition > p{
+          font-weight:200;
+      }
+      .palindrome-definition > p > i{
+          margin-right:4px;
+          margin-bottom:-0.4rem;
+      }
+      .cute-face{
+          display:block;
+          position:absolute;
+          right:20px;
+          top:25rem;
+          width:30vw;
+          height:30vw;
+          text-align:center;
+          background-color: #d1451b;
+          border:10px solid rgb(28, 189, 234);
+          border-radius:50%;
+      }
+      .eyes{
+          margin-top:13px;
+          margin-left:16px;
+          width:70%;
+          display:flex;
+          flex-direction: row;
+      }
+      .l-eye{
+          border-bottom-width:3vh;
+          border-left-width:2vw;
+          border-right-width:2vw;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: rgb(238, 248, 52);;
+          border-left-style:solid;
+          border-right-style:solid;
+          border-bottom-style:solid;
+          width:3vw;
+          height:3vh;
+          border-top-left-radius:90px ;
+          border-top-right-radius:50px ;
+          margin-right:15px;
+          background-color: transparent;
+  
+      }
+      .r-eye{
+          border-bottom-width:3vh;
+          border-left-width:2vw;
+          border-right-width:2vw;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: rgb(238, 248, 52);
+          border-left-style:solid;
+          border-right-style:solid;
+          border-bottom-style:solid;
+          width:3vw;
+          height:3vh;
+          border-top-left-radius:50px ;
+          border-top-right-radius:110px ;
+          margin-left:12px;
+          background-color:transparent;
+      }
+      .mouth{
+          margin-top:18px;
+          margin-left:22.3px;
+          width:12vw;
+          height:3vh;
+          background-color:#F5F5F5;
+          border:1px solid white; 
+      }
+      .frown-mouth{
+          border-top-left-radius:50px;
+          border-top-right-radius:50px;
+          border-bottom-left-radius:0;
+          border-bottom-right-radius:0;
+      }
+      .smile-mouth{
+          border-top-left-radius:0;
+          border-top-right-radius:0;
+          border-bottom-left-radius:50px;
+          border-bottom-right-radius:50px;
+      }
+  
+  }
+  
+  
+  
