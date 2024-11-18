@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+    <head>
+        <title>Palindrome word checker</title>
+        <meta charset="uft-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+       crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="PdC.css" />
+    </head>
+    <body>
+        <main class="container">
+                <h1 class="title-a remove"> Is it a Palindrome? </h1>
+                <h1 class="title-b">Word Of The Day <span>*PALINDROME*</span></h1>
+
+
+                <div class="cute-face">
+                    <div class="eyes">
+                        <div class="l-eye"></div>
+                        <div class="r-eye"></div>
+                    </div>
+                    <div class="mouth" id="change-mouth"></div>
+                </div>
+
+            <div class="palindrome-container">
+                    <label for="text-input">Enter in text to check for palindrome:</label>
+                    <div class="input-check">
+                       <input type="text" id="text-input" class="palindrome-text" value="" />
+                       <button type="submit" id="check-btn" >Check</button>
+                    </div>
+                    <div class="hidden-text"  id="result"></div>
+            </div>  
+        
+
+            <div class="palindrome-definition">
+                   <p>
+                       <i class="fa-regular fa-lightbulb"></i>
+                        A <dfn>palindrome</dfn> is a word or sentence that's
+                         spelled the same way both forward and backward, 
+                        ignoring punctuation, case, and spacing.
+                    </p>
+             </div>
+        </main>
+        <script src="PdC.js"></script>
+    </body>
+</html>
